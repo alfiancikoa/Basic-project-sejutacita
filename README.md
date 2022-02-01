@@ -19,10 +19,9 @@ Project Test
 
 # Description
 
-Project Erajaya Basic Rest-API
+Project Sejuta-Cita Basic Rest-API
 <br>
-<p>Project API sederhana dengan menggunakan 2 enpoint untuk menambah dan mengurutkan list product, project ini dapat dijalankan di localhost
-dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
+<p>Project API sederhana CRUD dari User dengan fitur login yang akan mengembalikan token dan dapat merefresh token selama waktu tertentu. User mempunyai dua role yaitu admin dan user itu sendiri. untuk admin dapat melakukan semua proses CRUD API, sedangkan untuk user hanya bisa mengakses data user bersangkutan saja. Dapat juga menggunakan Docker untuk sistem containerisasi aplikasi.</p>
 
 <br>
 
@@ -41,7 +40,6 @@ dan juga dapat dibungkus ke dalam container dengan mengguankn docker</p>
 <img src="https://github.com/alfiancikoa/project-rest-api/blob/main/img/HLA.jpg">
 
 # How to use
-<h5>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instruction</a></h5>
 
 - Clone this repository in your $PATH:
 ```
@@ -218,6 +216,4 @@ Example Test API in localhost using Postman
 - GET: localhost:8080/products/filter/new
 ```
 
-<h3>For More instructions details click link <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/instruction.txt">instructions</a></h3>
-<h4>For Unit Testing Coverage Report <a href="https://github.com/alfiancikoa/project-rest-api/blob/main/img/Coverage%20Report%20-%20.png">coverage</a></h4>
-<br>
+

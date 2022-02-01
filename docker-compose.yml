@@ -1,0 +1,35 @@
+version: '3.1'
+services:
+  app:
+    # build: .
+    image: app-image
+    restart: always
+    depends_on:
+      - appDb
+    environment:
+      JWT_SECRET: rahasia
+      MYSQL_CONNECTION_STRING: root:rootroot@tcp(172.30.0.3:3306)/sejutaproject?charset=utf8&parseTime=True&loc=Local
+    ports:
+      - 8080:8080
+      
+  appDb:
+    image: mysql
+    container_name: newdockerMySQL
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootroot
+      MYSQL_DATABASE: sejutaproject
+    ports: 
+      - 3307:3306
+    healthcheck:
+      test: ["CMD", "mysql", "-u", "root",  "-prootroot", "-e", "show schemas"]
+      interval: 10s 
+
+
+
+  adminer:
+      image: adminer
+      restart: always
+      ports: #host:container
+        - 8081:8080
